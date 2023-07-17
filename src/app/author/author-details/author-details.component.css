@@ -1,165 +1,139 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
-  .book-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    justify-content: space-around;
-  }
-  
-  .book {
-    background-color: white;
-    padding: 10px;
-    width:70%;
-    margin: auto;
-    text-align: center;
-  }
+.book-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	justify-content: space-around
+}
 
-  .card {
-    width: 100;
-    margin: auto;
-    text-align: center;
-    background-color: #222831;
-  height: 20rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.7);
-  color: white;
-  }
-  
+.book {
+	background-color: white;
+	padding: 10px;
+	width: 70%;
+	margin: auto;
+	text-align: center
+}
 
-  .card-info {
-    padding: 20px;
-   }
+.card {
+	text-align: center;
+	background-color: #222831;
+	height: 20rem;
+	color: white
+}
 
-  .small-image {
-    width: 100px; 
-    height: auto;
-    object-fit: cover;
-  }
-  .trash-icon {
-    text-align: right;
-  }
-  .card__image {
-    height: 160px;
-    width: 160px;
-    border-radius: 50%;
-    border: 5px solid #272133;
-    margin-top: 20px;
-    box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
-  }
-  .container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #222831;
-  }
+.small-image {
+	width: 100px
+}
+
+.trash-icon {
+	text-align: right
+}
+
+.card__image {
+	border-radius: 50%;
+	border: 5px solid #272133;
+	margin-top: 20px;
+	box-shadow: 0 10px 50px rgba(235, 25, 110, 1)
+}
+
+.container {
+	padding: 20px;
+	background-color: #222831
+}
 
 .switchContainer {
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
+	padding: 10px;
+	display: flex;
+	justify-content: space-around
 }
 
 .switch-holder {
-    display: flex;
-    padding: 10px 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+	display: flex;
+	padding: 10px 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	align-items: center;
+	background-color: white
 }
 
 .switch-label {
-    width: 35px;
+	width: 35px
 }
 
 .switch-toggle {
-    height: 30px;
+	height: 30px
 }
 
 .switch-toggle input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    z-index: -2;
+	position: absolute;
+	z-index: -2
 }
 
-.switch-toggle input[type="checkbox"] + label {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    margin: 0;
-    cursor: pointer;
-    box-shadow: inset -8px -8px 15px rgba(255,255,255,.6),
-                inset 10px 10px 10px rgba(0,0,0, .25);
-    
+.switch-toggle input[type="checkbox"]+label {
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: inset -8px -8px 15px rgba(255, 255, 255, .6), inset 10px 10px 10px rgba(0, 0, 0, .25)
 }
 
-.switch-toggle input[type="checkbox"] + label::before {
-    position: absolute;
-    content: 'OFF';
-    font-size: 10px;
-    text-align: center;
-    line-height: 25px;
-    top: 4px;
-    left: 8px;
-    width: 30px;
-    height: 25px;
-    border-radius: 20px;
-    background-color: #d1dad3;
-    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
-                3px 3px 5px rgba(0,0,0, .25);
-    transition: .3s ease-in-out;
+.switch-toggle input[type="checkbox"]+label::before {
+	position: absolute;
+	content: 'OFF';
+	font-size: 10px;
+	text-align: center;
+	line-height: 25px;
+	top: 4px;
+	left: 8px;
+	width: 30px;
+	height: 25px;
+	border-radius: 20px;
+	background-color: #d1dad3;
+	box-shadow: -3px -3px 5px rgba(255, 255, 255, .5), 3px 3px 5px rgba(0, 0, 0, .25)
 }
 
-.switch-toggle input[type="checkbox"]:checked + label::before {
-    left: 50%;
-    content: 'ON';
-    color: #fff;
-    background-color: #222831;
-    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
-                3px 3px 5px #222831;
+.switch-toggle input[type="checkbox"]:checked+label::before {
+	left: 50%;
+	content: 'ON';
+	color: #fff;
+	background-color: #222831;
+	box-shadow: -3px -3px 5px rgba(255, 255, 255, .5), 3px 3px 5px #222831
 }
 
+@media(max-width:600px) {
+	.book-list {
+		grid-template-columns: 1fr
+	}
 
+	.card {
+		height: auto
+	}
 
+	.switch-toggle {
+		height: 20px
+	}
 
+	.switch-toggle input[type="checkbox"]+label::before {
+		line-height: 14px;
+		top: 2px;
+		height: 15px;
+		left: 4px
+	}
 
+	.switch-toggle input[type="checkbox"]+label {
+		height: 20px;
+		width: 50px
+	}
 
-  /* using media query for mobile view */
-  @media (max-width: 600px) {
-    .book-list {
-      grid-template-columns: 1fr;
-    }
-    .card{
-        height: auto;
-    }
-    .switch-toggle {
-        height: 20px;
-    }
-    .switch-toggle input[type="checkbox"] + label::before {
-        line-height: 14px;
-        top: 2px;
-        height: 15px;
-        left: 4px;
-    }
-    .switch-toggle input[type="checkbox"] + label {
-        height: 20px;
-        width: 50px;
-    }
-    .switch-holder {
-        padding: 5px 5px;
-    }
-    .switch-toggle input[type="checkbox"]:checked + label::before {
-        left: 35%;
-        content: 'ON';
-    }
+	.switch-holder {
+		padding: 5px 5px
+	}
+
+	.switch-toggle input[type="checkbox"]:checked+label::before {
+		left: 35%;
+		content: 'ON'
+	}
 }
-  

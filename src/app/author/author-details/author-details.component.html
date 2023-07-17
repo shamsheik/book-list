@@ -1,48 +1,40 @@
 <div class="container">
-<div class="card">
-    <div class="card-info">
-    <img src="https://lh3.googleusercontent.com/oUUiPB9sq3ACq4bUaRmo8pgvC4FUpRRrQKcGIBSOsafawZfRpF1vruFeYt6uCfL6wGDQyvOi6Ez9Bpf1Fb7APKjIyVsft7FLGR6QqdRFTiceNQBm1In9aZyrXp33cZi9pUNqjHASdA=s170-no" alt="Person" class="card__image">
-    <h1>Author Name:{{authorDetails.author}}</h1>
-    <p>Birth Place:{{authorDetails.birthPlace}}</p>
-    <p>Birthdat:{{authorDetails.birthday}}</p>
-</div>
-</div>
-
-<div class="switchContainer">
-        
-    <div class="switch-holder">
-        <div class="switch-label">
-            <span>Title</span>
-        </div>
-        <div class="switch-toggle">
-            <input type="checkbox" (click)="sortDatabyTitle()" id="title">
-            <label for="title"></label>
-        </div>
+    <div class="card">
+       <div class="card-info">
+          <img src="https://lh3.googleusercontent.com/oUUiPB9sq3ACq4bUaRmo8pgvC4FUpRRrQKcGIBSOsafawZfRpF1vruFeYt6uCfL6wGDQyvOi6Ez9Bpf1Fb7APKjIyVsft7FLGR6QqdRFTiceNQBm1In9aZyrXp33cZi9pUNqjHASdA=s170-no" alt="Person" class="card__image">
+          <h1>Author Name:{{authorDetails.author}}</h1>
+          <p>Birth Place:{{authorDetails.birthPlace}}</p>
+          <p>Birthdat:{{authorDetails.birthday}}</p>
+       </div>
     </div>
-
-    <div class="switch-holder">
-        <div class="switch-label">
-            <span>Date</span>
-        </div>
-        <div class="switch-toggle">
-            <input type="checkbox" (click)="sortDatabyDate()"  id="sortByDate">
-            <label for="sortByDate"></label>
-        </div>
-    </div>
-
-
-</div>
-
-
-
-<div class="book-list">
-    <div *ngFor="let details of books" class="book">
-        <div class="trash-icon">
-            <i class="fa fa-trash" (click)="deleteBook(details)"></i>
+    <div class="switchContainer">
+       <div class="switch-holder">
+          <div class="switch-label">
+             <span>Title</span>
           </div>
-        <img [src]="details.imageUrl" class="small-image">
-        <h4><a [href]="details.purchaseLink">{{details.title}}</a></h4>
-        <p>Date Published: {{details.PublishDate}}</p>
+          <div class="switch-toggle">
+             <input type="checkbox" (click)="sortDatabyTitle()" id="title">
+             <label for="title"></label>
+          </div>
+       </div>
+       <div class="switch-holder">
+          <div class="switch-label">
+             <span>Date</span>
+          </div>
+          <div class="switch-toggle">
+             <input type="checkbox" (click)="sortDatabyDate()"  id="sortByDate">
+             <label for="sortByDate"></label>
+          </div>
+       </div>
     </div>
-  </div>
-</div>
+    <div class="book-list">
+       <div *ngFor="let details of books" class="book">
+          <div class="trash-icon">
+             <i class="fa fa-trash" (click)="deleteBook(details)"></i>
+          </div>
+          <img [src]="details.imageUrl" class="small-image">
+          <h4><a [href]="details.purchaseLink">{{details.title}}</a></h4>
+          <p>Date Published: {{details.PublishDate}}</p>
+       </div>
+    </div>
+ </div>
